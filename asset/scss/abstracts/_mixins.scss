@@ -1,0 +1,7 @@
+@mixin floatClear {
+	&::after {
+		content: '';
+		clear: both;
+		display: block;
+	}
+}

@@ -1,0 +1,152 @@
+.header {
+	.group-flex1 {
+		position: relative;
+		width: 1130px;
+		height: 160px;
+		margin: 0 auto;
+	}
+
+	.logo {
+		position: absolute;
+		top: 50%;
+		left: -9px;
+		margin-top: -32px;
+		a {
+			&::before {
+				@extend .sp-bg;
+				content: '';
+				display: block;
+				width: 222px;
+				height: 52px;
+				background-position: 0 -158px;
+			}
+		}
+	}
+	.search-area {
+		position: absolute;
+		top: 50%;
+		left: 238px;
+		margin-top: -28px;
+		.search-wrap {
+			position: relative;
+			width: 582px;
+			height: 52px;
+			border: 2px solid #19ce60;
+			border-radius: 2px;
+		}
+		.input-text {
+			width: 444px;
+			height: 24px;
+			padding: 13px 15px;
+			margin: 1px;
+			background-color: #fff;
+			font-size: 18px;
+			line-height: 24px;
+			color: #000;
+			font-weight: 700;
+			outline: 0;
+		}
+		.btn-submit {
+			width: 56px;
+			height: 56px;
+			position: absolute;
+			top: -2px;
+			right: 0;
+			background: #19ce60;
+			&::after {
+				@extend .sp-bg;
+				content: '';
+				width: 22px;
+				height: 22px;
+				display: inline-block;
+				vertical-align: top;
+				background-position: -420px 0;
+			}
+		}
+	}
+	.service-area {
+		position: absolute;
+		top: 12px;
+		right: 3px;
+		& > * {
+			float: left;
+		}
+
+		.bar {
+			width: 1px;
+			height: 10px;
+			background: #ccc;
+			margin: 3px 7px;
+		}
+
+		.link-start {
+		}
+		.link-start::after {
+			@extend .sp-bg;
+			content: '';
+			display: inline-block;
+			width: 26px;
+			height: 26px;
+			vertical-align: top;
+			margin: -3px 0 0 3px;
+			background-position: -308px -345px;
+		}
+		.link-junior::after {
+			@extend .sp-bg;
+			content: '';
+			display: inline-block;
+			width: 60px;
+			height: 10px;
+			background-position: -262px -330px;
+			background-repeat: no-repeat;
+			vertical-align: top;
+			margin: 3px;
+		}
+		.link-bin::after {
+			@extend .sp-bg;
+			content: '';
+			display: inline-block;
+			width: 34px;
+			height: 11px;
+			background-position: -369px -299px;
+			background-repeat: no-repeat;
+			vertical-align: top;
+			margin: 3px 3px 2px;
+		}
+	}
+
+	.group-flex2 {
+		border-top: 1px solid #e4e8eb;
+		box-shadow: 0 1px 3px 0 rgba(#000, 0.12);
+
+		.inner {
+			width: 1130px;
+			margin: 0 auto;
+			@include floatClear;
+		}
+	}
+
+	.gnb-area {
+		float: left;
+		padding: 11px 0;
+
+		.gnb-list {
+			@include floatClear;
+			font-size: 15px;
+			font-weight: bold;
+			line-height: 30px;
+		}
+		.gnb-item {
+			float: left;
+			color: #10ce60;
+			& + .gnb-item {
+				margin-left: 12px;
+			}
+			a {
+			}
+		}
+	}
+	.weather-area {
+		float: right;
+	}
+}
